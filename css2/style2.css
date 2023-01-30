@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+:root{
+    --cor-primaria: rgb(0, 0, 0);
+    --cor-secundaria: rgb(126, 96, 0);
+    --cor-wpp: rgb(38, 185, 33);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Rubik', sans-serif;  
+    
+}
+
+a { color: inherit; } 
+
+.link-wpp{
+    position: fixed;
+    bottom: 125px;
+    right: 2rem;
+    z-index: 1000;
+    cursor: pointer;   
+}
+
+.btn-wpp{
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;    
+       
+}
+
+.btn-wpp:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.2);
+}
+
+body{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor-primaria);
+    
+    
+}
+
+main{
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+header{    
+    width: 1140px;
+    padding-top: 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px;
+}
+
+header .btn-header{
+    text-decoration: none;  
+    border: none;
+    padding: 10px;
+    background-color: var(--cor-wpp);
+    border-radius: 10px;
+    color:#fff; 
+}
+
+header nav{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header nav a{
+    color: #fff;
+}
