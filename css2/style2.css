@@ -3,7 +3,7 @@
 
 :root{
     --cor-primaria: rgb(0, 0, 0);
-    --cor-secundaria: rgb(126, 96, 0);
+    --cor-secundaria: #de9632;
     --cor-wpp: rgb(38, 185, 33);
 }
 
@@ -21,14 +21,14 @@ a { color: inherit; }
 
 .link-wpp{
     position: fixed;
-    bottom: 125px;
+    bottom: 90px;
     right: 2rem;
     z-index: 1000;
     cursor: pointer;   
 }
 
 .btn-wpp{
-    width: 120px;
+    width: 90px;
     transition: all 0.5s;
     cursor: pointer;    
        
@@ -39,36 +39,46 @@ a { color: inherit; }
     transform: scale(1.2);
 }
 
+span#burguer{
+    display: none;
+}
+
 body{
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--cor-primaria);
-    
-    
-}
-
-main{
-    width: 1200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    background-image: url(../img2/fundo01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;       
     
 }
 
 header{    
-    width: 1140px;
-    padding-top: 35px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    margin: 0px;
+    justify-content: center ;
+    background-color: rgb(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    position: fixed;
 }
 
-header .btn-header{
+header .box-header{
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto 0;
+}
+
+header .box-header .btn-header{
     text-decoration: none;  
     border: none;
     padding: 10px;
@@ -77,13 +87,109 @@ header .btn-header{
     color:#fff; 
 }
 
-header nav{
+header .box-header nav{
     width: 300px;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-header nav a{
+header .box-header nav a{
+    color: var(--cor-secundaria)
+}
+
+header .box-header img{
+    width: 18%;
+}
+
+section.banner{
+    max-width: 900px;
+    display: flex;
+    align-items: left;
+    margin-top: 150px ;
+}
+
+section.banner .box-banner{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+section.banner .fature{
+    
+    text-align: left;
     color: #fff;
+    font-weight: 400;
+    font-size: 22pt;
+}
+
+section.banner .box-banner h2{
+    color:#fff;
+    font-size: 10pt ;
+    font-weight: 300;
+}
+
+.banner button{
+    text-decoration: none;  
+    border: none;
+    padding: 5px;
+    max-width: 300px;
+    height: 30px;
+    text-align: center;
+    background-color: var(--cor-wpp);
+    border-radius: 10px;
+    color:#fff; 
+    margin-top: 10px;
+}
+
+
+main{
+    margin-top: 80px ;
+    width: 100%;
+    height: 3000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: initial;
+    background-color: black;
+    
+    
+}
+
+
+
+main p{
+    color: #fff;
+}
+
+
+@media (max-width: 450px){
+
+    .box-header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .box-header img{
+        width: 60%;
+    }
+
+    .btn-header{
+        display: none;
+    }
+
+    header .box-header nav{    
+        display: none;    
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    span#burguer{
+        display:block;
+        cursor: pointer;
+        color: #fff;
+    }
+
 }
